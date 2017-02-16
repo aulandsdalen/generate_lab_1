@@ -33,7 +33,7 @@ int main(int argc, char const **argv)
 	}
 	for (i = 0; i < NUM_RECORDS; i++) {
 		record.value = (float)randombytes_random()/(float)randombytes_random();
-		record.recorded_at = (int)randombytes_uniform(MAXTIME);
+		record.recorded_at = randombytes_uniform(MAXTIME);
 		fprintf(output, "%f,%d\n", record.value, record.recorded_at);
 	}
 	fclose(output);
